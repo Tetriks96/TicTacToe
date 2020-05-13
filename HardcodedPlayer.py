@@ -26,7 +26,7 @@ class HardcodedPlayer(Player):
                 tileValue = game.gameBoard[row][col]
                 if tileValue == 0:
                     if move == 0:
-                        game.gameBoard[row][col] = -1 if game.roundNumber % 2 == 0 else 1
+                        super().playMove(game.gameBoard, game.roundNumber, row, col)
                         self.nextMoveIndex += 1
                         return
                     move -= 1
