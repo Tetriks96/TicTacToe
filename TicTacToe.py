@@ -1,4 +1,4 @@
-from Game import Game
+from Game import *
 from RandomPlayer import RandomPlayer
 from AIPlayer import AIPlayer
 
@@ -31,7 +31,8 @@ for i in range(nRounds):
             winner = 'O'
             
         print(f'Winner: {winner}')
-        game.printGameboard()
+        printGameboard(game.gameBoard)
+        
 
 #  Note: in python, negative indices wrap back to the end of the array
 #  so index = -1 is equivalent to index = 2
